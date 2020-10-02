@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#header{
+			width: 100%;
+			border: 1px solid red;
+		}
+		.header-nav{
+			border: 10px solid seagreen;
+		    margin-left: 10%;
+		    margin-right: 10%;  /* 边界 */
+		}
+		.header-nav .header-logo{
+			float: left;
+		    position: absolute;
+		    left: 10%;
+		    top: 5px;
+		    border: 10px solid red;
+		    line-height: 15px; 
+		}
+		.header-logo img{
+		    width: 150px;
+		    height: 70px;
+		    position: absolute;
+		    left: 88px;
+		    top: -19px;
+		}
+		.header-nav .header-intermediate{
+			/*text-align: center; /*让div内部文字居中*/*/
+			background-color: #fff;
+			border-radius: 20px;
+			width: 70px;
+			height: 100px;
+			margin: auto;
+		}
+		/* 搜索框样式   */
+		.header-nav .header-intermediate .search input{
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+		    /* appearance: none; */
+		    /* outline: 0; */
+		    width: 550px;
+		    height: 40px;
+		    border: 0px solid #fff;
+		    border-radius: 20px;
+		    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+		    padding: 10px 50px 0px 25px;
+		    top: 3%;
+		    position: absolute;
+		    left: 35%;
+		}
+		.header-nav .header-intermediate .search .rightimg{
+		    padding: 0px 15px;
+		    width: 25px;
+		    height: 25px;
+		    position: absolute;
+		    left: 59%;
+		    top: 4%;
+		}
+		/*.header-nav .header-intermediate img{	
+			width: 15px;
+			height: 15px;
+			padding: 0px 150px;
+			border: 5px solid green;
+		}*/
+		/*    	id的索引要用#   */
+		#time{
+			position: absolute;
+		    right: 15%;
+		    top: 39px;
+		    border: 1px solid gray;
+		    font-size: x-large;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<!--一级导航栏-->
+               <div class="header-nav">
+                <div class="container">   <!-- container的意思是容器  -->
+                	<!--：左侧logo -->
+                	<h1 class="header-logo">
+                		<a href="">
+                			<img src="../img/龙肖.png"/> <!--暂无logo -->
+                		</a>
+                	</h1>
+                	<!-- 搜索和登录   -->
+                	<div class="header-intermediate"> <!--intermediate的意思是中间 -->
+                		<!-- 搜索输入   -->
+                		<div class="search">
+                			<div class="ipt">
+                				<input type="text" id="search_btn"class="search_ipt"/>
+                				<img src="../img/搜索.png" class="rightimg"/>
+                			</div>
+                		</div>
+                	</div>
+                	<!-- 实时时间   -->
+                	<div id="time">
+ 						<script type="text/javascript">
+							var add=setInterval("getTime()",1000);
+							//stop()这个函数主要是清除设置的定时器
+							function stop() {
+							    clearInterval(add);
+							}
+							//这个函数主要是获取时间然后写入div中
+							function getTime() {
+							    var date=new Date().toLocaleString();//创建date对象，获取时间
+							    var id1=document.getElementById("time");//通过div标签的id多去div标签
+							    id1.innerHTML=date;//将时间通过innerHTML属性写入div标签中
+							}
+						</script>
+					</div>
+                </div>
+            </div>
+            <!-- 一级导航栏 -->
+	</body>
+</html>
