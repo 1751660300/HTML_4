@@ -2,8 +2,19 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	
 }
 .content{
 	width: 80%;
 	margin: 0px 10%;
+}
+
+.bc{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	/* background-image: url(../img/teacher-1.jpg); */
+	/* background-size: auto; */
 }

@@ -117,6 +117,7 @@
 	height: 450px;
 	/* border: 1px solid red; */
 	margin-top: 20px;
+	position: relative;
 }
 
 .shistory .title{
@@ -129,6 +130,7 @@
 .shistory .title span{
 	height: 100%;
 	margin-left: 5%;
+	color: #9E5E90;
 }
 
 .shistory .main{
@@ -138,7 +140,6 @@
 	border-bottom: 1px solid #9E5E90;
 	border-left: 1px solid #9E5E90;
 	border-right: 1px solid #9E5E90;
-	
 }
 
 .shistory .main div{
@@ -236,7 +237,7 @@
 .myclass{
 	width: 100%;
 	height: 650px;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	margin-top: 25px;
 }
 
@@ -250,27 +251,39 @@
 .myclass .title span{
 	height: 100%;
 	margin-left: 5%;
+	color: #9E5E90;
 }
 
 .myclass .main{
-	width: 100%;
+	width: 99.8%;
 	height: 600px;
+	border-left: 1px solid #9E5E90;
+	border-right: 1px solid #9E5E90;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.myclass .main:hover{
+	overflow-y: visible;
 }
 
 .myclass .main .top, .myclass .main .bottom{
 	width: 100%;
 	height: 50%;
 	/* border: 1px solid red; */
-	border-top: 1px solid #9E5E90;
+	border-bottom: 1px solid #9E5E90;
 }
 
-.myclass .main .top div{
+.myclass .main .top>div{
 	width: 20%;
 	height: 94%;
 	/* border: 1px solid red; */
 	float: left;
 	margin-left: 3.8%;
 	margin-top: 15px;
+/* 	border-left: 1px solid #9E5E90;
+	border-right: 1px solid #9E5E90; */
 }
 
 .myclass .main .top .cimg{
@@ -292,6 +305,7 @@
 	font-weight: bold;
 }
 
+
 .myclass .main .bottom div{
 	width: 20%;
 	height: 94%;
@@ -299,4 +313,79 @@
 	float: left;
 	margin-left: 3.8%;
 	margin-top: 15px;
+}
+
+.myclass .main::-webkit-scrollbar{
+	width: 5px;
+}
+
+.myclass .main::-webkit-scrollbar-track{
+	  background-color: white;
+	  -webkit-border-radius: 2em;
+	  -moz-border-radius: 2em;
+	  border-radius: 2em;
+	  border: 1px solid lightgray;
+}
+
+.myclass .main::-webkit-scrollbar-thumb{
+	background-color: #A7779F;
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+	/* border: 1px solid lightgray; */
+}
+
+
+
+/* 学习记录左边按钮 */
+.shistory .left-spet{
+	width: 6% ;
+	height: 90%;
+	position: absolute;
+	left: 0.5%;
+	bottom: -1%;
+	/* border: 1px solid red; */
+	/* display: none; */
+}
+
+.shistory .right-spet{
+	width: 6% ;
+	height: 90%;
+	position: absolute;
+	right: 0.5%;
+	bottom: -1%;
+	
+	/* border: 1px solid red; */
+}
+
+.shistory  .left-spet>button{
+	width: 99%;
+	height: 100%;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	font-size: 30px;
+	color: #A7779F;
+	visibility: hidden;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.shistory  .right-spet>button{
+	width: 99%;
+	height: 100%;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	font-size: 30px;
+	color: #A7779F;
+	visibility: hidden;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+
+/* 学习记录是否显示 */
+.shunshow{
+	display: none;
 }

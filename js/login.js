@@ -1,5 +1,5 @@
 var dl = true // 是否处于登录页面
-var userinfo = [] // 用户信息
+var userinfo = [1] // 用户信息
 // 点击注册,到注册页
 $(".bottom button:nth-child(1)").click(function(){
 	console.log("123")
@@ -83,7 +83,16 @@ $(".foot div:nth-last-child(1)").click(function(){
 		$(".background").show()
 		$(".login-bc").show()
 	}else{
-		
+		// 替换main中的内容
+		console.log("替换main中的内容")
+		$.ajax({
+			url:"my.html",
+			type:"get",
+			data:"",
+			success:function(result){
+				$("main").html(result)
+			}
+		})
 	}
 })
 
@@ -93,7 +102,21 @@ $(".foot div:nth-last-child(2)").click(function(){
 		$(".background").show()
 		$(".login-bc").show()
 	}else{
-		// 替换main中的内容
 		
 	}
+})
+
+
+// 底部点击首页
+$(".foot div:nth-last-child(3)").click(function(){
+	console.log("123456")
+	console.log("替换main中的内容")
+	$.ajax({
+		url:"index1.html",
+		type:"get",
+		data:"",
+		success:function(result){
+			$("main").html("`"+result+"`")
+		}
+	})
 })
