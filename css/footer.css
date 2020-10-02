@@ -1,0 +1,33 @@
+
+.foot{
+	border: 1px solid red;
+	width: 80%;
+	height: 60px;
+	position: fixed;
+	bottom: 2px;
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid #A7779F;
+	border-bottom: 2px solid #A7779F;
+	background-color: white;
+	box-shadow: 0px 0px 5px 1px gray;
+}
+
+.foot div{
+	width: 30%;
+	height: 100%;
+	border-left: 2px solid #A7779F;
+	border-right: 2px solid #A7779F;
+	text-align: center;
+	line-height: 60px;
+	font-size: 30px;
+	color: #A7779F;
+	font-weight: bold;
+	text-shadow: 0px 2px 1px black;
+	cursor: pointer;
+}
+
+.foot div:hover{
+	font-size: 35px;
+	background-color: #F6E4D6;
+}

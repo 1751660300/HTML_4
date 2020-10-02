@@ -1,0 +1,302 @@
+/* 用户信息 */
+.userinfo{
+	width: 100%;
+	/* border: 1px solid red; */
+	height: 400px;
+	display: flex;
+}
+
+.userinfo .left{
+	width: 40%;
+	height: 100%;
+	border: 1px solid #A7779F;
+}
+
+.userinfo .left .headimg{
+	width: 300px;
+	height: 300px;
+	/* border: 1px solid red; */
+	margin: 0 auto;
+	border-radius: 150px;
+	background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601616870285&di=ff31dc3a8dac28d6693afa1b39707c24&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201901%2F19%2F20190119231949_buetu.jpg");
+	background-size: 100%;
+}
+
+.userinfo .left .uname{
+	width: 300px;
+	height: 15%;
+	/* border: 1px solid red; */
+	margin: 0 auto;
+	margin-top: 15px;
+	text-align: center;
+	color: #A7779F;
+}
+
+.userinfo .right{
+	width: 60%;
+	height: 100%;
+	/* border: 1px solid red; */
+}
+
+.userinfo .right .utitle{
+	width: 100%;
+	height: 20%;
+}
+
+.userinfo .right .utitle button{
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	outline: none;
+	background-color: white;
+	border: none;
+	color: #9E5E90;
+}
+
+.userinfo .right .info{
+	width: 100%;
+	height: 80%;
+}
+
+.userinfo .right .info ul{
+	width: 100%;
+	height: 100%;
+	/* border: 1px solid red; */
+	
+}
+
+.userinfo .right .info ul li{
+	width: 100%;
+	height: 16%;
+	/* border: 1px solid red; */
+	border-top: 1px solid #F6E4D6;
+	margin-top: 1.7%;
+	display: flex;
+	position: relative;
+}
+
+.userinfo .right .info ul li:nth-last-child(1){
+	border-bottom: 1px solid #F6E4D6;
+}
+.userinfo .right .info .label{
+	width: 20%;
+	/* height: 100%; */
+	/* border: 1px solid red; */
+	position: absolute;
+	bottom: 0px;
+}
+
+
+.userinfo .right .info .label span{
+	display: inline-block;
+	/* border: 1px solid red; */
+	height: 100%;
+	width: 100%;
+	text-align:right;
+	font-size: 22px;
+	color: #A7779F;
+	
+}
+
+.userinfo .right .info .nr{
+	/* position: relative; */
+}
+
+.userinfo .right .info .nr span{
+	text-align:left;
+	font-size: 22px;
+	color: #A7779F;
+	position: absolute;
+	bottom: 0px;
+	left: 25%;
+}
+
+/* 学习记录 */
+.shistory{
+	width: 100%;
+	height: 450px;
+	/* border: 1px solid red; */
+	margin-top: 20px;
+}
+
+.shistory .title{
+	background-color: #A7779F;
+	height: 50px;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.shistory .title span{
+	height: 100%;
+	margin-left: 5%;
+}
+
+.shistory .main{
+	width: 99.8%;
+	height: 90%;
+	/* border: 1px solid red; */
+	border-bottom: 1px solid #9E5E90;
+	border-left: 1px solid #9E5E90;
+	border-right: 1px solid #9E5E90;
+	
+}
+
+.shistory .main div{
+	width: 25%;
+	height: 100%;
+	/* border: 1px solid #9E5E90; */
+	border-left: 1px solid #9E5E90;
+	border-right: 1px solid #9E5E90;
+	float: left;
+	margin-left: 6.25%;
+}
+
+.shistory .main div ul{
+	width: 100%;
+	height: 85%;
+	/* border: 1px solid red; */
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.shistory .main div ul:hover{
+	overflow-y: visible;
+}
+
+
+.shistory .main div ul::-webkit-scrollbar{
+	width: 5px;
+}
+
+.shistory .main div ul::-webkit-scrollbar-track{
+	  background-color: white;
+	  -webkit-border-radius: 2em;
+	  -moz-border-radius: 2em;
+	  border-radius: 2em;
+	  border: 1px solid lightgray;
+}
+
+.shistory .main div ul::-webkit-scrollbar-thumb{
+	background-color: #A7779F;
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+	/* border: 1px solid lightgray; */
+}
+.shistory .main div ul li{
+	width: 100%;
+	height: 15%;
+	/* border: 1px solid red; */
+	border-bottom: 1px dotted #A7779F;
+	position: relative;
+}
+
+.shistory .main div ul li span{
+	display: block;
+	font-size: 20px;
+	color: #A7779F;
+	position: absolute;
+	bottom: 0px;
+	/* border: 1px solid forestgreen; */
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.shistory .main div ul li span:nth-last-child(1){
+	right: 8px;
+	width: 70%;
+}
+
+.shistory .main div ul li span:nth-last-child(2){
+	left: 8px;
+	width: 20%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+.shistory .main .date{
+	width: 100%;
+	height: 14.8%;
+	margin: 0;
+	text-align: center;
+	font-size: 25px;
+	line-height: 56px;
+	color: #9E5E90;
+	background-color: #FBF2ED;
+	/* border-bottom: 1px solid #9E5E90; */
+	border-top: 1px solid #9E5E90;
+	border-left: none;
+	border-right: none;
+}
+
+/* 我的课程 */
+.myclass{
+	width: 100%;
+	height: 650px;
+	border: 1px solid red;
+	margin-top: 25px;
+}
+
+.myclass .title{
+	background-color: #A7779F;
+	height: 50px;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.myclass .title span{
+	height: 100%;
+	margin-left: 5%;
+}
+
+.myclass .main{
+	width: 100%;
+	height: 600px;
+}
+
+.myclass .main .top, .myclass .main .bottom{
+	width: 100%;
+	height: 50%;
+	/* border: 1px solid red; */
+	border-top: 1px solid #9E5E90;
+}
+
+.myclass .main .top div{
+	width: 20%;
+	height: 94%;
+	/* border: 1px solid red; */
+	float: left;
+	margin-left: 3.8%;
+	margin-top: 15px;
+}
+
+.myclass .main .top .cimg{
+	width: 100%;
+	height: 80%;
+	margin: 0px 0px;
+	/* border: 1px solid red; */
+	background-image: url("http://cdn.tmooc.cn/bsfile//courseImg///280c6025caa14649ba86b3561db92066.jpg");
+	background-size: 100%;
+	box-shadow: 0px 0px 5px 1px #666;
+}
+
+.myclass .main .top .cname{
+	width: 100%;
+	height: 15%;
+	margin: 5px 0px;
+	/* border: 1px solid red; */
+	color: #9E5E90;
+	font-weight: bold;
+}
+
+.myclass .main .bottom div{
+	width: 20%;
+	height: 94%;
+	border: 1px solid red;
+	float: left;
+	margin-left: 3.8%;
+	margin-top: 15px;
+}

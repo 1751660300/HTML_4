@@ -1,0 +1,197 @@
+/* 分类和轮播图 */
+.type{
+	width: 100%;
+	height: 370px;
+	border: 1px solid red;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
+.type .type-left{
+	width: 28%;
+	height: 100%;
+	border: 1px solid red;
+}
+
+.type .type-left ul{
+	width: 100%;
+	height: 100%;
+	border: 1px solid red;
+}
+
+.type .type-left ul li{
+	width: 100%;
+	height: 15%;
+	margin: 3px 0px;
+	border: 1px solid red;
+	font-size: 20px;
+	position: relative;
+}
+
+.type .type-left ul li span{
+	position: absolute;
+	top: 20%;
+	left: 15%;
+}
+
+.type .type-left ul li div{
+	width: 100%;
+	height: 600%;
+	background-color: white;
+	position: relative;
+	left: 102%;
+	z-index: 1;
+	display: none;
+	background-color: #FBF2ED;
+	box-shadow: 0px 0px 5px 1px gray;
+}
+
+.li-color1{
+	background-color: #F6E4D6;
+}
+
+.li-color2{
+	background-color: #FBF2ED;
+}
+
+.type .type-right{
+	width: 71%;
+	height: 100%;
+}
+
+.type .type-right .lbt{
+	width: 100%;
+	height: 100%;
+	border: 1px solid red;
+	background-color: #A7779F;
+}
+
+/* 课程推荐 */
+.tuijian{
+	width: 100%;
+	height: 600px;
+	border: 1px solid red;
+	margin-top: 15px;
+}
+
+.tuijian .title{
+	width: 100%;
+	height: 10%;
+	background-color: #9E5E90;
+	display: flex;
+	justify-content: space-between;
+	line-height: 60px;
+}
+
+.tuijian .title div:nth-child(1){
+	margin-left: 4.5%;
+}
+
+.tuijian .title div:nth-child(2){
+	margin-right: 4%;
+}
+
+.tuijian .bottom{
+	width: 100%;
+	height: 90%;
+	border: 1px solid red;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tuijian .bottom .bottom-left{
+	width: 28%;
+	height: 100%;
+	border: 1px solid red;
+	background-color: #5E3856;
+}
+
+.tuijian .bottom .bottom-right{
+	width: 71%;
+	height: 100%;
+	border: 1px solid red;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tuijian .bottom .bottom-right div{
+	width: 33%;
+	height: 50%;
+	border: 1px solid red;
+	margin-left: 0.5px;
+}
+
+/* 主讲名师 */
+.tmain{
+	width: 100%;
+	height: 600px;
+	margin-top: 15px;
+	border: 1px solid red;
+}
+
+.tmain .title{
+	width: 100%;
+	height: 10%;
+	background-color: #9E5E90;
+	display: flex;
+	justify-content: space-between;
+	line-height: 60px;
+}
+
+.tmain .title div:nth-child(1){
+	margin-left: 4.5%;
+}
+
+.tmain .title div:nth-child(2){
+	margin-right: 4%;
+}
+
+.tmain .main{
+	height: 90%;
+	width: 100%;
+	border: 1px solid red;
+	
+}
+
+.tmain .main .top,.tmain .main .bottom{
+	width: 100%;
+	height: 50%;
+	border: 1px solid red;
+	display: flex;
+	position: relative;
+	justify-content: space-around;
+}
+
+.tmain .main .top{
+	background-color: #F6E4D6;
+}
+
+.tmain .main .bottom{
+	background-color: #FBF2ED;
+}
+
+.tmain .main .md{
+	width: 20%;
+	height: 85%;
+	border: 1px solid red;
+	background-color: white;
+	margin-top: 3.3%;
+}
+
+/* 脚部部分 */
+.footer{
+	border: 1px solid red;
+	width: 100%;
+	height: 70px;
+}
+
+/* 登录部分 */
+.login-bc{
+	position: absolute;
+	top: 0px;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+}
