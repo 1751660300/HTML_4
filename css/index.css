@@ -42,10 +42,23 @@
 	background-color: white;
 	position: relative;
 	left: 102%;
-	z-index: 1;
+	z-index: 2;
 	display: none;
 	background-color: #FBF2ED;
 	box-shadow: 0px 0px 5px 1px gray;
+	/* justify-content: left; */
+	padding-left: 50px;
+}
+
+.type .type-left ul li div a{
+	display: inline-block;
+	/* border: 1px solid red; */
+	width: 50%;
+	height: 10%;
+	font-size: 16px;
+	color: #A7779F;
+	/* left: 0px; */
+	/* right: 0px; */
 }
 
 .li-color1{
@@ -66,6 +79,78 @@
 	height: 100%;
 	/* border: 1px solid red; */
 	background-color: #A7779F;
+	position: relative;
+}
+
+.type .type-right .lbt button{
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	font-size: 35px;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	border: none;
+	color: #666;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.type .type-right .lbt .leftjt{
+	
+}
+
+.type .type-right .lbt .rightjt{
+	right: 0;
+}
+
+.type .type-right .lbt div{
+	width: 80%;
+	height: 85%;
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 7.5%;
+	left: 10%;
+	background-size: 100%;
+	border-radius: 5px;
+}
+
+.type .type-right .lbt div img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.type .type-right .lbt .lbt-active-left{
+	width: 80%;
+	height: 75%;
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 12.5%;
+	left: 5%;
+	/* background-image: url("//img.mukewang.com/climg/5f57198309772e0106960344.jpg"); */
+}
+
+.type .type-right .lbt .lbt-active{
+	width: 80%;
+	height: 85%;
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 7.5%;
+	left: 10%;
+	/* background-image: url("//img.mukewang.com/climg/5eb8aa0109080be806960344.jpg"); */
+	z-index: 1;
+	box-shadow: 0px 0px 5px 1px black;
+}
+
+.type .type-right .lbt .lbt-active-right{
+	width: 80%;
+	height: 75%;
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 12.5%;
+	left: 15%;
+	/* background-image: url("//img.mukewang.com/climg/5ee6e304091cdf3d00000000.jpg"); */
 }
 
 /* 课程推荐 */
@@ -112,6 +197,11 @@
 	background-color: white;
 }
 
+.tuijian .bottom .bottom-left img{
+	width: 100%;
+	height: 100%;
+}
+
 .tuijian .bottom .bottom-right{
 	width: 71%;
 	height: 100%;
@@ -124,11 +214,14 @@
 	width: 33%;
 	height: 50%;
 	/* border: 1px solid red; */
-	border-bottom: 1px solid #A7779F;
-	border-right: 1px solid #A7779F;
+	/* border-bottom: 1px solid #A7779F; */
+	/* border-right: 1px solid #A7779F; */
 	margin-left: 1.885px;
 }
-
+.tuijian .bottom .bottom-right div img{
+	width: 100%;
+	height: 100%;
+}
 /* 主讲名师 */
 .tmain{
 	width: 100%;

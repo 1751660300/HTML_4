@@ -11,6 +11,7 @@
 	border-bottom: 2px solid #A7779F;
 	background-color: white;
 	box-shadow: 0px 0px 5px 1px gray;
+	z-index: 10;
 }
 
 .foot div{
@@ -21,7 +22,7 @@
 	text-align: center;
 	line-height: 60px;
 	font-size: 30px;
-	color: #A7779F;
+	color: #9E5E90;
 	font-weight: bold;
 	text-shadow: 0px 2px 1px black;
 	cursor: pointer;
@@ -29,5 +30,5 @@
 
 .foot div:hover{
 	font-size: 35px;
-	background-color: #FBF2ED;
+	background-color: #A7779F;
 }
