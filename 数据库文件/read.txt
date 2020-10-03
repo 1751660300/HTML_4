@@ -1,0 +1,32 @@
+MYSQL 导入导出数据库文件
+一、从数据库导出数据库或表文件：
+
+mysqldump -u用戶名 -p密码 -d 数据库名 表名 > 脚本名;
+
+
+导出整个数据库结构和数据
+mysqldump -h localhost -uroot -p123456 database > e:\dump.sql
+
+
+导出单个数据表结构和数据
+mysqldump -h localhost -uroot -p123456 database table > e:\dump.sql
+
+
+导出整个数据库结构（不包含数据）
+mysqldump -h localhost -uroot -p123456 -d database > e:\dump.sql
+
+
+导出单个数据表结构（不包含数据）
+mysqldump -h localhost -uroot -p123456 -d database table > e:\dump.sql
+
+ 
+
+二、导入数据库或表到数据库（数据库要先建好）
+
+ 方法1：mysql -h localhost -uroot -p123456 -d database table < e:\dump.sql
+
+ 方法2：
+
+    1.进入MySQL：mysql -u root -p
+    2.输入：use 目标数据库名
+    3.导入文件：source  e:\dump.sql
