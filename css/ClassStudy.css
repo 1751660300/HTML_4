@@ -1,0 +1,135 @@
+body{
+	margin: 0; /* 边距 */
+	padding: 0;/* 填充 */
+}
+#header{
+	width: 100%;
+	/* border: 1px solid red; */
+}
+.header-nav{
+	/* border: 10px solid seagreen; */
+    margin-left: 10%;
+    margin-right: 10%;  /* 边界 */
+	background-color: #A7779F;
+}
+.header-nav .header-logo{
+	float: left;
+    position: absolute;
+    left: 10%;
+    top: 5px;
+    /* border: 10px solid red; */
+    line-height: 15px; 
+}
+.header-logo img{
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    left: 88px;
+    top: -12px;
+}
+.header-nav .header-intermediate{
+	border-radius: 20px;
+	width: 70px;
+	height: 100px;
+	margin: auto;
+}
+/* 搜索框样式   */
+.header-nav .header-intermediate .search input{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    /* appearance: none; */
+    /* outline: 0; */
+    width: 350px;
+    height: 30px;
+    border: 0px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+    padding: 0px 50px 0px 25px;
+    top: 4.3%;
+    position: absolute;
+    left: 35%;
+}
+.header-nav .header-intermediate .search .rightimg{
+    padding: 0px 15px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 60%;
+    top: 5.2%
+}
+/*.header-nav .header-intermediate img{	
+	width: 15px;
+	height: 15px;
+	padding: 0px 150px;
+	border: 5px solid green;
+}*/
+/*    	id的索引要用#   */
+#time{
+    position: absolute;
+    right: 13%;
+    top: 4%;
+    /* border: 1px solid gray; */
+    font-size: x-large;
+}
+/*============================下面是播放器位置 =============================================*/
+.video_background{
+	/* border: 1px solid #E40077; */
+}
+.video_player .video_where{
+    border: 1px solid #797979;
+    margin-left: 10%;
+    margin-top: 0;
+    margin-right: 10%;
+    padding-top: 50px;
+    background-color: #FBF2ED;
+    height: 596px;
+}
+.video_player .video_where .class_right{
+    position: absolute;
+    top: 18%;
+    right: 500px;
+    font-size: x-large;
+}
+.video_player .video_where .class_right input{
+	/* border: 5px solid #E40077; */
+	width: 406px;
+    height: 490px;
+    position: absolute;
+    right: -347px;
+    top: 24px;
+}
+.video_player .video_where .Danmu_Anniu input{
+    position: absolute;
+    right: 171px;
+    top: 659px;
+    font-size: larger;
+} 
+.My_beijing{
+	border: 25px soild #2E8B57;
+	background-color: #FBF2ED;
+}
+/*==============================我的笔记=================================*/
+.My_Biji{
+    border: 1px solid #797979;
+    margin-left: 9.9%;
+    margin-right: 9.9%;
+    padding-top: 0px;
+    height: 1500px;
+    /* margin-top: 50px */
+}
+.My_Biji_background{
+	height: 66px;
+    font-size: x-large;
+    background: #9E5E90;
+}
+.My_Biji_Updata input{
+    position: absolute;
+    left: 82%;
+    font-size: large;
+    top: 766px;
+    padding: 0 25px 0 25px
+}
+.My_Biji_NeiRong input{
+	height: 1200px;
+    width: 1209px;
+}
