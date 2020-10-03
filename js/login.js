@@ -96,27 +96,41 @@ $(".foot div:nth-last-child(1)").click(function(){
 	}
 })
 
+
+
 //点击课程学习，先判断是否有用户信息
 $(".foot div:nth-last-child(2)").click(function(){
 	if(userinfo.length == 0){
 		$(".background").show()
 		$(".login-bc").show()
 	}else{
-		
+		console.log("123456")
+		console.log("替换main中的内容")
+		$.ajax({
+			url:"ClassStudy.html",
+			type:"get",
+			data:"",
+			success:function(result){
+				$("main").html(result)
+			}
+		})
 	}
 })
 
 
 // 底部点击首页
 $(".foot div:nth-last-child(3)").click(function(){
-	console.log("123456")
-	console.log("替换main中的内容")
+	// console.log("123456")
+	// console.log("替换main中的内容")
 	$.ajax({
 		url:"index1.html",
 		type:"get",
 		data:"",
 		success:function(result){
-			$("main").html("`"+result+"`")
+			$("main").html(result)
 		}
 	})
 })
+
+
+

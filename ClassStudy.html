@@ -1,65 +1,22 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/ClassStudy.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<style type="text/css">
 			
 		</style>
 	</head>
 	<body>
-		<header><!--  -->
-			<div id="header">
-				<!--一级导航栏-->
-                <div class="header-nav">
-                	<div class="container">   <!-- container的意思是容器  -->
-                		<!--：左侧logo -->
-                		<h1 class="header-logo">
-                			<a href="">
-                				<img src="img/龙肖.png"/> <!--暂无logo -->
-                			</a>
-                		</h1>
-                		<!-- 搜索和登录   -->
-                		<div class="header-intermediate"> <!--intermediate的意思是中间 -->
-                			<!-- 搜索输入   -->
-                			<div class="search">
-                				<div class="ipt">
-                					<input type="text" id="search_btn"class="search_ipt"/>
-                					<img src="img/搜索.png" class="rightimg"/>
-                				</div>
-                			</div>
-                		</div>
-                		<!-- 实时时间   -->
-                		<div id="time">
- 							<script type="text/javascript">
-							    var add=setInterval("getTime()",1000);
-							    //stop()这个函数主要是清除设置的定时器
-							    function stop() {
-							        clearInterval(add);
-							    }
-							    //这个函数主要是获取时间然后写入div中
-							    function getTime() {
-							        var date=new Date().toLocaleString();//创建date对象，获取时间
-							        var id1=document.getElementById("time");//通过div标签的id多去div标签
-							        id1.innerHTML=date;//将时间通过innerHTML属性写入div标签中
-							    }
-							</script>
-						</div>
-                	</div>
-                </div>
-                <!-- 一级导航栏 -->
-			</div>
-			<!-- 背景  -->
-			<div class="My_beijing">
-				
-			</div>
+		<div class="content"> -->
 			<!-- 播放器位置   以及     课程名称，课程描述，学习路线-->
 			<div class="video_player">
 				<div class="video_where">
-					<div class="video_background">
+	<!-- 				<div class="video_background">
 						
-					</div>
+					</div> -->
 					<video width="800" height="550" controls autoplay>
 						<source src="../video/Joker.小丑.2019.中英字幕.WEBrip.720P-人人影视.mp4" type="video/mp4"></source>
 						<source src="../video/Joker.小丑.2019.中英字幕.WEBrip.720P-人人影视.ogg" type="video/ogg"></source>
@@ -70,31 +27,34 @@
 						</object>
 						当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
 					</video>
+					
 					<div class="class_right">
-						<input type="text" name="聊天框"/>
+						<div class="ltk"  type="text" name="聊天框"></div>
 					</div>
 					<div class="Danmu_Anniu">
-						<input type="button"  value="按钮提交弹幕" />
+						<input class="srk" type="text" name="" id="wbk" value="" />
+						<input type="button"  value="发送" />
 					</div>
 					
 				</div>
 				<!-- 背景  -->
-				<div class="My_beijing">
+<!-- 				<div class="My_beijing">
 					
-				</div>
+				</div> -->
 				<!-- 我的笔记     -->
 				<div class="My_Biji">
 					<div class="My_Biji_background">
 						  我的学习笔记
 					</div>
 					<div class="My_Biji_Updata">
-						<input type="submit" value="提交" />
-					</div>
-					<div class="My_Biji_NeiRong">
-						<input type="text"value="文档" />
-					</div>
+						<input type="submit" value="保存" />
+					</div>	
 				</div>
+<!-- 				<div class="My_Biji_NeiRong">
+					<input type="text"value="文档" />
+				</div> -->
 			</div>
-		</header>
+<!-- 		</div>
 	</body>
 </html>
+ -->

@@ -9,15 +9,54 @@
 		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
 		<link rel="stylesheet" type="text/css" href="css/my.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/WebHeader.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ClassStudy.css"/>
 				
 	</head>
 	<body>
 	<!-- 	<div class="bc"></div> -->
 		<div  style="position: relative;">
 			<div class="content">
-				<div class="title">
-					
+				<div id="header">
+				<!--一级导航栏-->
+				   <div class="header-nav">
+					<div class="container">   <!-- container的意思是容器  -->
+						<!--：左侧logo -->
+						<h1 class="header-logo">
+							<a href="">
+								<img src="./img/龙肖.png"/> <!--暂无logo -->
+							</a>
+						</h1>
+						<!-- 搜索和登录   -->
+						<div class="header-intermediate"> <!--intermediate的意思是中间 -->
+							<!-- 搜索输入   -->
+							<div class="search">
+								<div class="ipt">
+									<input type="text" id="search_btn"class="search_ipt" placeholder="输入老师的名字"/>
+									<img src="./img/搜索.png" class="rightimg"/>
+								</div>
+							</div>
+						</div>
+						<!-- 实时时间   -->
+						<div id="time">
+							<script type="text/javascript">
+								var add=setInterval("getTime()",1000);
+								//stop()这个函数主要是清除设置的定时器
+								function stop() {
+									clearInterval(add);
+								}
+								//这个函数主要是获取时间然后写入div中
+								function getTime() {
+									var date=new Date().toLocaleString();//创建date对象，获取时间
+									var id1=document.getElementById("time");//通过div标签的id多去div标签
+									id1.innerHTML=date;//将时间通过innerHTML属性写入div标签中
+								}
+							</script>
+						</div>
+					</div>
 				</div>
+				       
+				
 				<main>
 					<!-- 课程分类 -->
 					<div class="type">
