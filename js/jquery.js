@@ -1,10 +1,49 @@
-// 背景
-// var y = parseInt(window.outerHeight)
-// $(".bc").css({"height": y +"px"})
-// console.log($(".bc").css("width"), $(".bc").css("height"))
-	
+// 搜索
+$(".search .ipt input").focus(function(){
+	// console.log(".search .result")
+	$(".search .result").css({"visibility":"visible"})
+	$(".search .result").html("")
+	$(".search .result").append(`<div class="list">
+						<span>无查询结果</span>
+					</div>`)
+})
 
+$(".search .ipt input").blur(function(){
+	// console.log(".search .result")
+	$(".search .result").css({"visibility":"hidden"})
+})
 
+var stimer = setInterval(function(){
+	var text = $(".search .ipt input").prop("value")
+	if (text != ""){
+		$.ajax({
+			url:"http://127.0.0.1:5000/search",
+			type:"post",
+			data:{"text":text},
+			success:function(result){
+				// console.log(result)
+				$(".search .result").html("")
+				if(result.length != 0){
+					for(var i in result){
+						// console.log(i)
+						var cname = result[i]["cname"]
+						$(".search .result").append(`<div class="list">
+											<a href="#">${cname}</a>
+										</div>`)
+					}
+				}else{
+					$(".search .result").append(`<div class="list">
+										<span>无查询结果</span>
+									</div>`)
+				}
+			}
+		})
+		$(".search .result").css({"visibility":"visible"})
+	}else{
+		// if()
+		// $(".search .result").css({"visibility":"hidden"})
+	}
+}, 3000)
 
 $(".type-left ul li").each(function(){
 	var id = $(this).attr("id")
@@ -97,10 +136,10 @@ function setTeacher(res){
 }
 
 
-var lbttimer = setInterval(function(){
-	lnext()
-	lbtset(lbt)
-}, 3000)
+// var lbttimer = setInterval(function(){
+// 	lnext()
+// 	lbtset(lbt)
+// }, 3000)
 
 // 轮播图的左右箭头显示
 $(".type .type-right").mouseover(function(){

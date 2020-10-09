@@ -1,3 +1,30 @@
+/* 头部部分 */
+/* 搜索结果 */
+
+.search .result{
+	width: 80%;
+	height: 200px;
+	border: 1px solid #A7779F;
+	position: absolute;
+	z-index: 2;
+	background-color: white;
+	box-shadow: 0px 0px 5px 1px gray;
+	visibility: hidden;
+}
+
+.search .result div{
+	width: 100%;
+	height: 40px;
+	/* border: 1px solid red; */
+	line-height: 40px;
+	padding: 5px;
+}
+
+.search .result div a{
+	width: 100%;
+	height: 100%;
+	/* border: 1px solid red; */
+}
 /* 分类和轮播图 */
 .type{
 	width: 100%;
@@ -314,4 +341,5 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0,0.2);
+	z-index: 3;
 }

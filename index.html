@@ -14,6 +14,14 @@
 				
 	</head>
 	<body>
+		<script type="text/javascript">
+			var userinfo = [] // 用户信息
+			var msg = [] // 接收的消息
+			var lbttimer = setInterval(function(){
+				lnext()
+				lbtset(lbt)
+			}, 3000)
+		</script>
 	<!-- 	<div class="bc"></div> -->
 		<div  style="position: relative;">
 			<div class="content">
@@ -32,8 +40,14 @@
 							<!-- 搜索输入   -->
 							<div class="search">
 								<div class="ipt">
-									<input type="text" id="search_btn"class="search_ipt" placeholder="输入老师的名字"/>
+									<input value="" type="text" id="search_btn"class="search_ipt" placeholder="输入课程的名字"/>
 									<img src="./img/搜索.png" class="rightimg"/>
+								</div>
+								<!-- 搜索结果框 -->
+								<div class="result">
+									<!-- <div class="list">
+										<a href="#">${}</a>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -56,7 +70,7 @@
 					</div>
 				</div>
 				       
-				
+				<!-- 主体部分 -->
 				<main>
 					<!-- 课程分类 -->
 					<div class="type">

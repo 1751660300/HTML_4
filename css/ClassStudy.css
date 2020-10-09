@@ -8,26 +8,46 @@
     /* padding-top: 50px; */
     /* background-color: #FBF2ED; */
     height: 550px;
+	width: 99.8%;
 	position: relative;
 }
+
+.video_player .video_where video{
+	width: 66%;
+}
+
 .video_player .video_where .class_right{
-    position: absolute;
+    width: 33.5%;
+	position: absolute;
     top: 0%;
-    right: 0;
+    right: 0%;
     font-size: x-large;
 }
 .video_player .video_where .class_right .ltk{
 	/* border: 5px solid #E40077; */
-	width: 410px;
+	width: 100%;
     height: 500px;
     position: absolute;
     /* right: -347px; */
-	right: 0;
+	left: 0;
     /* top: 24px; */
 }
 
+.video_player .video_where .class_right .airtle{
+	width: 100%;
+	height: 100%;
+	/* border: 1px solid #A7779F; */
+	overflow: scroll;
+	overflow-x: hidden;
+	color: #A7779F;
+	font-size: 18px;
+	text-align: justify;
+	text-justify: newspaper;
+	word-break: break-all;
+}
+
 .video_player .video_where .Danmu_Anniu .srk{
-	width: 292px;
+	width: 290px;
 	height: 44px;
 	/* border: 1px solid red; */
 	position: absolute;

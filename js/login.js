@@ -1,5 +1,5 @@
 var dl = true // 是否处于登录页面
-var userinfo = [1] // 用户信息
+// var userinfo = [] // 用户信息
 // 点击注册,到注册页
 $(".bottom button:nth-child(1)").click(function(){
 	console.log("123")
@@ -53,16 +53,27 @@ $("button.c").click(function(){
 		var f = $(this).prop("id")
 		datas[f] = v
 	})
-	console.log(datas)
+	// console.log(datas)
 	$.ajax({
-		url:"http://127.0.0.1:5000/login",
+		url:"http://127.0.0.1:5000/users",
 		type:"POST",
 		data:datas,
 		success:function(res){
-			console.log("success" + res.type)
-			if(res.type == true){
+			console.log(res)
+			for(var i in res){
+				// console.log(res[i].uid, res[i].upw)
+				if(res[i].uid == datas["card"] && res[i].upw == datas["pass"]){
+					userinfo.push(res[i])
+					// console.log(i)
+				}
+			}
+			if(userinfo.length != 0){
+			// 	userinfo.push(res[0])
+			// 	console.log("success" + res[datas["card"]])
 				$(".background").hide()
 				$(".login-bc").hide()
+			}else{
+				alert("用户名或密码错误！")
 			}
 		}
 		
@@ -84,19 +95,31 @@ $(".foot div:nth-last-child(1)").click(function(){
 		$(".login-bc").show()
 	}else{
 		// 替换main中的内容
-		console.log("替换main中的内容")
+		// console.log("替换main中的内容")
 		$.ajax({
 			url:"my.html",
 			type:"get",
 			data:"",
 			success:function(result){
 				$("main").html(result)
+				myxr(userinfo)
 			}
 		})
 	}
 })
 
 
+function myxr(userinfo){
+	var use = userinfo[0]
+	// background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601616870285&di=ff31dc3a8dac28d6693afa1b39707c24&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201901%2F19%2F20190119231949_buetu.jpg");
+	console.log(use)
+	
+	$(".userinfo .left .headimg").css({"background-image":"url(\""+use.uheadimg+"\")"})
+	$(".userinfo .left .uname h2").html(use["uname"])
+	$(".nr").each(function(){
+		$(this).children("span").html(use[$(this).prop("id")])
+	})
+}
 
 //点击课程学习，先判断是否有用户信息
 $(".foot div:nth-last-child(2)").click(function(){
@@ -104,8 +127,8 @@ $(".foot div:nth-last-child(2)").click(function(){
 		$(".background").show()
 		$(".login-bc").show()
 	}else{
-		console.log("123456")
-		console.log("替换main中的内容")
+		// console.log("123456")
+		// console.log("替换main中的内容")
 		$.ajax({
 			url:"ClassStudy.html",
 			type:"get",
