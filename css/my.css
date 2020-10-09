@@ -15,11 +15,16 @@
 .userinfo .left .headimg{
 	width: 300px;
 	height: 300px;
-	/* border: 1px solid red; */
+	border: 1px solid #A7779F;
 	margin: 0 auto;
 	border-radius: 150px;
-	background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601616870285&di=ff31dc3a8dac28d6693afa1b39707c24&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201901%2F19%2F20190119231949_buetu.jpg");
+	/* background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601616870285&di=ff31dc3a8dac28d6693afa1b39707c24&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201901%2F19%2F20190119231949_buetu.jpg"); */
 	background-size: 100%;
+	text-align: center;
+	line-height: 300px;
+	font-size: 30px;
+	color: #A7779F;
+	cursor: pointer;
 }
 
 .userinfo .left .uname{
