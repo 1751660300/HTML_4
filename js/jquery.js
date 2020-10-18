@@ -194,7 +194,7 @@ function lbtset(lbts){
 }
 
 
-var classinfo = {"key":[]}
+
 // 推荐课程
 $.ajax({
 	url:"http://127.0.0.1:5000/classes",
@@ -212,11 +212,20 @@ $.ajax({
 // 对数据进行分类
 function flclass(res){
 	for(var i in res){
+		var con = false
 		if(classinfo[res[i].ctype] == undefined){
 			classinfo[res[i].ctype] = []
 			classinfo.key.push(res[i].ctype)
 			classinfo[res[i].ctype].push(res[i])
 		}else{
+			for (j in classinfo[res[i].ctype]){
+				if(classinfo[res[i].ctype][j]["cid"] == res[i]["cid"]){
+					con = true
+				}
+			}
+			if(con){
+				continue
+			}
 			classinfo[res[i].ctype].push(res[i])
 		}
 	}
@@ -234,11 +243,12 @@ function xrym(classinfo){
 			
 		</div>
 		`)
-		// $(".type .type-left ul li>div").html("")
+		$(".type .type-left ul li:nth-child("+child+") div").html("")
 		for(var j in classinfo[data]){
 			var name = classinfo[data][j].cname
+			var id = classinfo[data][j].cid
 			// console.log(name)
-			$(".type .type-left ul li:nth-child("+child+") div").append(`<a href="#">${name}</a>`)
+			$(".type .type-left ul li:nth-child("+child+") div").append(`<a href="#" onclick=detail("${id}")>${name}</a>`)
 		}
 	}
 }
@@ -247,14 +257,20 @@ function xrym(classinfo){
 // 推荐课程
 function tjkc(res){
 	var img = "http:" + res[0]["cimg"]
+	var lcid = res[0]["cid"]
 	$(".tuijian .bottom .bottom-left").html(
-		`<img src="${img}" >`
+		`<img src="${img}">
+		 <div class="bottom-info" onclick=detail("${lcid}")></div>
+		`
 	)
 	
 	$(".tuijian .bottom .bottom-right div").each(function(i){
 		if(i >= res.length) return
 		var rimg = "http:" + res[i+1]["cimg"]
-		$(this).html(`<img src="${rimg}" >`)
+		var rcid = res[i+1]["cid"]
+		$(this).html(`<img src="${rimg}">
+		<div class="bottom-info" onclick=detail("${rcid}")></div>
+		`)
 	})
 }
 
@@ -279,3 +295,17 @@ var timer = setInterval(function(){
 	$(".md-name").slideUp(500)
 	
 }, 3000)
+
+
+var detail = function(id){
+	cid = id
+	console.log("detail")
+	$.ajax({
+		url:"detail.html",
+		type:"get",
+		data:"",
+		success:function(result){
+			$("main").html(result)
+		}
+	})
+}

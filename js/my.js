@@ -54,3 +54,11 @@ function last(){
 
 }
 
+
+$(".userinfo .right .info .nr").focus(function(){
+	$(this).css({"boder": "1px solid #A7779F"})
+})
+
+$(".userinfo .right .info .nr").blur(function(){
+	$(this).css({"boder": "0px solid #A7779F"})
+})

@@ -11,12 +11,14 @@
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 		<link rel="stylesheet" type="text/css" href="css/WebHeader.css"/>
 		<link rel="stylesheet" type="text/css" href="css/ClassStudy.css"/>
-				
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>		
 	</head>
 	<body>
 		<script type="text/javascript">
 			var userinfo = [] // 用户信息
+			var classinfo = {"key":[]} // 课程信息
 			var msg = [] // 接收的消息
+			var cid = ""
 			var lbttimer = setInterval(function(){
 				lnext()
 				lbtset(lbt)
@@ -80,7 +82,7 @@
 								<li id="1">
 									<span>Java</span>
 									<div class="f-bottom">
-										<a href="#"></a>
+										<a href="#" onclick="detail()">java</a>
 									</div>
 								</li>
 								<li id="2">
@@ -132,6 +134,7 @@
 						<div class="bottom">
 							<div class="bottom-left">
 								<img src="" >
+								<div class="bottom-info"></div>
 							</div>
 							<div class="bottom-right">
 								<div id="1"></div>
